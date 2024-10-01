@@ -7,7 +7,7 @@
       It's a simple .sh script, a file given execute privilege, that will go to the file, 'vsftpd.conf' in the etc directory and then scans the file for the line that begins with       
       "anonymous_enable". It then replaces that line with "anonymous_enable=NO". 
 
-**  What it's good for:**
+  **What it's good for:**
       This script can be staged to shut down FTP services if a breach is detected. Changing rapidly between configurations allows for quick patching and hardening a machine if deemed necessary. One example of this I experienced at a Network Defense/Blue Team competition. The Red Team kept getting in with the default anonymous login ability in FTP. Had I been able to disable this feature quickly, I may have been caused less trouble. If you have FTP services running and have not disabled anonymous logon, or chosen deliberately to configure it so, you might want to use this script. If your system is scanned, it's likely this will show up as a vulnerablility that can be exploited and it can give free-reign to any Red Team or bad actor.
       
   **What it uses:**
