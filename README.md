@@ -22,20 +22,19 @@ Script 1 is a Bash script designed to quickly turn off the anonymous login setti
      - This script is for vsftpd FTP systems, and will not work with ProFTPD or pure-FTPd. These systems have other ways of disabling anonymous login if they have been activated.
      - Make sure when installing the script the file is given execute permission or it will not run as a script. This can be done with the chmod command as follows:
            chmod +x disable_ftp_anon.sh
-         
      - To run the script, type: 
         sudo ./disable_ftp_anon.sh
             
 
   What it looks like in action:
       Here we see it enabled in the vsftopd.conf file
-      ![vsftpd.conf file with anonymous login enabled](https://github.com/[zackgoodson]/[Scripts]/[main]/vsftpd.conf--before_script.png?raw=true)
+      ![vsftpd.conf file with anonymous login enabled](/vsftpd.conf--before_script.png?)
 
-      Then we see the script successfully has made the change and outputs the corresponding console text:
-      ![successfully run script with noted change to vsftpd.conf file](https://github.com/[zackgoodson]/[Scripts]/[main]/successful_script_run.png?raw=true)
+  Then we see the script successfully has made the change and outputs the corresponding console text:
+      ![successfully run script with noted change to vsftpd.conf file](/successful_script_run.png)
 
-      Then we go back into the file, and see that the change has indeed taken effect as designed:
-      ![vsftpd.conf file with anonymous login disabled](https://github.com/[zackgoodson]/[Scripts]/[main]/vsftpd.conf--after_script.png?raw=true)
+  Then we go back into the file, and see that the change has indeed taken effect as designed:
+      ![vsftpd.conf file with anonymous login disabled](vsftpd.conf--after_script.png?)
 
 
   
