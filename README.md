@@ -29,13 +29,13 @@ Script 1 is a Bash script designed to quickly turn off the anonymous login setti
 
   What it looks like in action:
       Here we see it enabled in the vsftopd.conf file
-      ![vsftpd.conf file with anonymous login enabled](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+      ![vsftpd.conf file with anonymous login enabled](https://github.com/[zackgoodson]/[Scripts]/[main]/vsftpd.conf--before_script.png?raw=true)
 
       Then we see the script successfully has made the change and outputs the corresponding console text:
-      ![successfully run script with noted change to vsftpd.conf file](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+      ![successfully run script with noted change to vsftpd.conf file](https://github.com/[zackgoodson]/[Scripts]/[main]/successful_script_run.png?raw=true)
 
       Then we go back into the file, and see that the change has indeed taken effect as designed:
-      ![vsftpd.conf file with anonymous login disabled](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+      ![vsftpd.conf file with anonymous login disabled](https://github.com/[zackgoodson]/[Scripts]/[main]/vsftpd.conf--after_script.png?raw=true)
 
 
   
