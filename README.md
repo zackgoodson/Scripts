@@ -24,9 +24,9 @@ Script 1 is a Bash script designed to quickly turn off the anonymous login setti
   **Other requirements:** <br>
      - This script is for vsftpd FTP systems, and will not work with ProFTPD or pure-FTPd. These systems have other ways of disabling anonymous login if they have been activated. <br>
      - Make sure when installing the script the file is given execute permission or it will not run as a script. This can be done with the chmod command as follows: <br>
-        >  chmod +x disable_ftp_anon.sh <br>
+        chmod +x disable_ftp_anon.sh <br>
      - To run the script, type: <br>
-        >  sudo ./disable_ftp_anon.sh
+        sudo ./disable_ftp_anon.sh
             
 
   **What it looks like in action:**
@@ -49,10 +49,10 @@ Script 2 is a .ps1 (Powershell) script designed to quickly block the anonymous a
       Server Message Block (SMB) protocol.
   
  **What it's good for:**
-      This script can be staged to immediately shut down information leaks via SMB, blocking requests for information that can be used for privilege escalation, lateral movement on the network, and reconnaissance. This SMB-accessible informtion can be used in social engineering efforts to add legitimacy to requests, to enumerate systems and specifically design targeted attacks against specific OS versions, to brute-force credentials with specific usernames, and to gather vital information without running network enumeration scans. 
+      This script can be staged to immediately shut down information leaks via SMB, blocking requests for information that can be used for privilege escalation, lateral movement on the network, and reconnaissance. This SMB-accessible informtion can be used in social engineering efforts to add legitimacy to requests, to enumerate systems and specifically design targeted attacks against specific OS versions, to brute-force credentials with specific usernames, and to gather vital information without running network enumeration scans. <br>
       Without having to dive into the registry files and find where in the hundreds of registry settings this hole is, simply run the script and another security hole is filled.
 
-  **What it uses:**
+  **What it uses:** <br>
       Just Powershell. It searches and validates that the registry file path exists, that the setting is there, and then changes it to 2, disabling access to information to anonymous users. Then it reads out the current setting of the Restrict Access value. The script is composed of Windows Registry file navigation and Powershell commands--that being said, it will not work on anything but Windows. 
 
 **Other Requirements** <br>
@@ -60,7 +60,7 @@ Script 2 is a .ps1 (Powershell) script designed to quickly block the anonymous a
       -A reminder that this script is for **Windows versions 2008 and earlier** <br>
       -Sometimes the SMB service or computer must be restarted for the effect to take full effect.
 
-  **What it looks like in action:**
+  **What it looks like in action:** <br>
       Here we see it enabled in the registry file:
       ![registry file with anonymous access set to 0, which is open to all](/anon_smb_access_open.png)
 
