@@ -2,7 +2,7 @@
 
 
 ### **Script 1 : Disabling Anonymous Login on FTP** 
-__
+
 Script 1 is a Bash script designed to quickly turn off the anonymous login setting of a device running FTP. This can be used in security incidents, simulated or real, to rapidly fill a security hole if needed.
 
   **What it is:**
@@ -41,8 +41,10 @@ Script 1 is a Bash script designed to quickly turn off the anonymous login setti
 
 <br>
 
+___
+
 ### **Script 2 : Disabling Anonymous Access on SMB Protocol**
-__
+
 
 Yoink
  
