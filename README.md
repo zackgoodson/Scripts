@@ -42,11 +42,33 @@ ___
 
 ### **Script 2 : Disabling Anonymous Access on SMB Protocol**
 
- 
+Script 2 is a .ps1 (Powershell) script designed to quickly block the anonymous access to information including usernames, lists of shared resources, and device and network attributes. This can be used in security incidents, simulated or real, to rapidly plug this information leak prevalent on machines running Windows 2008 or earlier Windows versions.
 
-
+  **What it is:**
+      It's a Powershell script that will go into the proper registry file and change the access level parameter for SMB to 2, which blocks all anonymous access via the 
+      Server Message Block (SMB) protocol.
   
+ **What it's good for:**
+      This script can be staged to immediately shut down information leaks via SMB, blocking requests for information that can be used for privilege escalation, lateral movement on the network, and reconnaissance. This SMB-accessible informtion can be used in social engineering efforts to add legitimacy to requests, to enumerate systems and specifically design targeted attacks against specific OS versions, to brute-force credentials with specific usernames, and to gather vital information without running network enumeration scans. 
+      Without having to dive into the registry files and find where in the hundreds of registry settings this hole is, simply run the script and another security hole is filled.
 
+  **What it uses:**
+      Just Powershell. It searches and validates that the registry file path exists, that the setting is there, and then changes it to 2, disabling access to information to anonymous users. Then it reads out the current setting of the Restrict Access value. The script is composed of Windows Registry file navigation and Powershell commands--that being said, it will not work on anything but Windows. 
+
+**Other Requirements** 
+      -Make sure when running the script your current user has the correct permissions to execute scripts. 
+      -A reminder that this script is for **Windows versions 2008 and earlier**
+      -Sometimes the SMB service or computer must be restarted for the effect to take full effect.
+
+  **What it looks like in action:**
+      Here we see it enabled in the registry file:
+      ![registry file with anonymous access set to 0, which is open to all](/anon_smb_access_open.png)
+
+  Then we see the script successfully has made the registry value change and outputs the corresponding console text:
+      ![successfully run script with current setting in registry file](/smb_anon_disable_output.png)
+
+  Then we go back into the registry file, and see that the change has indeed taken effect as designed:
+      ![registry file with anonymous access set to 2, which is closed to all anonymous users](/anon_smb_access_closed.png)
       
           
         
