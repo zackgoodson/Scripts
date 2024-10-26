@@ -41,9 +41,6 @@ Script 1 is a Bash script designed to quickly turn off the anonymous login setti
 ___
 
 <br>
-___
-
-<br>
 
 
 ### **Script 2 : Disabling Anonymous Access on SMB Protocol**
