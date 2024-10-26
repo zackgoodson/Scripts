@@ -5,7 +5,7 @@ ___
 
 Script 1 is a Bash script designed to quickly turn off the anonymous login setting of a device running FTP. This can be used in security incidents, simulated or real, to rapidly fill a security hole if needed.
 
-  **What it is:**
+  **What it is:** <br>
       It's a simple .sh script, a file given execute privilege, that will go to the file, 'vsftpd.conf' in the etc directory and then scans the file for the line that begins with       
       "anonymous_enable". It then replaces that line with "anonymous_enable=NO". 
 
@@ -29,7 +29,7 @@ Script 1 is a Bash script designed to quickly turn off the anonymous login setti
         sudo ./disable_ftp_anon.sh
             
 
-  **What it looks like in action:**
+  **What it looks like in action:** <br>
       Here we see it enabled in the vsftopd.conf file
       ![vsftpd.conf file with anonymous login enabled](/vsftpd.conf--before_script.png?)
 
