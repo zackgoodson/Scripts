@@ -42,6 +42,8 @@ ___
  <br>
 ___
 
+
+
 ### **Script 2 : Disabling Anonymous Access on SMB Protocol**
 
 
