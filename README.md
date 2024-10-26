@@ -14,19 +14,19 @@ Script 1 is a Bash script designed to quickly turn off the anonymous login setti
       If you have FTP services running and have not disabled anonymous logon, or chosen deliberately to configure it so, you might want to use this script. If your system is scanned, it's likely this will show up as a vulnerablility that can be exploited and it can give free-reign to any Red Team or bad actor. Currently the script changes one line but it can be easily edited to adjust as many lines as necessary in the vsftpd.conf file, and could thereby automatically configure the FTP settings according to your needs.
       
   **What it uses:** <br>
-      The key to finding the line with that particular setting and then replacing it is the 'Sed" text tool that comes installed in many Linux-based systems. If you are attempting to use it but do not have sed installed, you can install it with the following:
-          For Ubuntu/Debian/APT-based systems: 
-              sudo apt update
-              sudo apt install sed
-          For CentOS/RedHat/YUM or DNF-based systems use:
-              sudo yum install sed
+      The key to finding the line with that particular setting and then replacing it is the 'Sed" text tool that comes installed in many Linux-based systems. If you are attempting to use it but do not have sed installed, you can install it with the following: <br>
+          > For Ubuntu/Debian/APT-based systems: 
+              > sudo apt update
+              > sudo apt install sed
+          > For CentOS/RedHat/YUM or DNF-based systems use:
+              > sudo yum install sed
               
   **Other requirements:** <br>
      - This script is for vsftpd FTP systems, and will not work with ProFTPD or pure-FTPd. These systems have other ways of disabling anonymous login if they have been activated. <br>
-     - Make sure when installing the script the file is given execute permission or it will not run as a script. This can be done with the chmod command as follows: <br>
-           chmod +x disable_ftp_anon.sh <br>
+     - Make sure when installing the script the file is given execute permission or it will not run as a script. This can be done with the chmod command as follows: <br>  
+        > chmod +x disable_ftp_anon.sh <br>
      - To run the script, type: <br>
-        sudo ./disable_ftp_anon.sh
+        > sudo ./disable_ftp_anon.sh
             
 
   **What it looks like in action:**
