@@ -39,8 +39,10 @@ Script 1 is a Bash script designed to quickly turn off the anonymous login setti
   Then we go back into the file, and see that the change has indeed taken effect as designed:
       ![vsftpd.conf file with anonymous login disabled](vsftpd.conf--after_script.png?)
 ___
- <br>
+
+<br>
 ___
+
 <br>
 
 
