@@ -24,9 +24,9 @@ Script 1 is a Bash script designed to quickly turn off the anonymous login setti
   **Other requirements:** <br>
      - This script is for vsftpd FTP systems, and will not work with ProFTPD or pure-FTPd. These systems have other ways of disabling anonymous login if they have been activated. <br>
      - Make sure when installing the script the file is given execute permission or it will not run as a script. This can be done with the chmod command as follows: <br>
-        > chmod +x disable_ftp_anon.sh <br>
+        >  chmod +x disable_ftp_anon.sh <br>
      - To run the script, type: <br>
-        > sudo ./disable_ftp_anon.sh
+        >  sudo ./disable_ftp_anon.sh
             
 
   **What it looks like in action:**
