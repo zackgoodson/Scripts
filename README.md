@@ -40,7 +40,7 @@ Script 1 is a Bash script designed to quickly turn off the anonymous login setti
       ![vsftpd.conf file with anonymous login disabled](vsftpd.conf--after_script.png?)
 ___
  <br>
-
+___
 ### **Script 2 : Disabling Anonymous Access on SMB Protocol**
 
 
