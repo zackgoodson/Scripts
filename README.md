@@ -55,7 +55,7 @@ Script 2 is a .ps1 (Powershell) script designed to quickly block the anonymous a
   **What it uses:**
       Just Powershell. It searches and validates that the registry file path exists, that the setting is there, and then changes it to 2, disabling access to information to anonymous users. Then it reads out the current setting of the Restrict Access value. The script is composed of Windows Registry file navigation and Powershell commands--that being said, it will not work on anything but Windows. 
 
-**Other Requirements** 
+**Other Requirements** <br>
       -Make sure when running the script your current user has the correct permissions to execute scripts. <br>
       -A reminder that this script is for **Windows versions 2008 and earlier** <br>
       -Sometimes the SMB service or computer must be restarted for the effect to take full effect.
