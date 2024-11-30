@@ -116,10 +116,10 @@ case $choice in
         echo "vsftpd enabled to start on boot."
 
         # Set the correct permissions for xferlog to secure the logs
-        echo "Securing vsftpd logs by setting proper permissions on /var/log/xferlog..."
-        chmod 640 /var/log/xferlog
-        chown root:adm /var/log/xferlog
-        echo "Permissions set: only root and adm group can read the xferlog."
+ #       echo "Securing vsftpd logs by setting proper permissions on /var/log/xferlog..."
+ #       chmod 640 /var/log/xferlog
+ #       chown root:adm /var/log/xferlog
+ #       echo "Permissions set: only root and adm group can read the xferlog."
 
         echo "vsftpd has been secured and is running with the latest best practices."
         ;;
