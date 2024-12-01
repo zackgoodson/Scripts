@@ -147,6 +147,15 @@ These two enable using TLS 1.2 and 1.3, which are the more recent and secure ver
             
 
   **What it looks like in action:**<br><br>
+      Here we see a full run output when Option 1 is selected (Just disabling it entirely):
+      ![Option 1 Disable](sv_disable_run.png?) <br>
+Here we see certain pre-existing paramters in the vsftpd file before we run the script:
+      ![vsftpd.conf file before running the script](vs_file_pre-run.png?) <br>
+Here we have the full run of the script when option 2 is selected, and a certificate is created:
+      ![Full output of the script with certificate signing](sv_first_run.png?) <br>
+Here we have the vsftpd.conf file parameters with the changes made and added parameters at the end of the file:
+      ![vsftpd.conf file after running the script](vs_file_post-run.png?) <br>
+      
       
           
         
