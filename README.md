@@ -142,9 +142,9 @@ These two enable using TLS 1.2 and 1.3, which are the more recent and secure ver
   **Other requirements:** <br> 
      - This script is for vsftpd FTP systems, and will not work with ProFTPD or pure-FTPd. These systems have other ways of disabling anonymous login if they have been activated. <br>
      - Make sure when installing the script the file is given execute permission or it will not run as a script. This can be done with the chmod command as follows: <br>
-        chmod +x disable_ftp_anon.sh <br>
+        chmod +x secure_vsftpd.sh <br>
      - To run the script, type: <br>
-        sudo ./disable_ftp_anon.sh
+        sudo ./secure_vsftpd.sh
             
 
   **What it looks like in action:**<br><br>
