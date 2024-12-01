@@ -127,8 +127,9 @@ These two enable using TLS 1.2 and 1.3, which are the more recent and secure ver
 
 
   **What it's good for:** <br> 
-      This script can be staged to shut down FTP services if a breach is detected. Changing rapidly between configurations allows for quick patching and hardening a machine if deemed necessary. One example of this I experienced at a Network Defense/Blue Team competition. The Red Team kept getting in with the default anonymous login ability in FTP. Had I been able to disable this feature quickly, I may have been caused less trouble. 
+      This script can be staged to shut down FTP services if a breach is detected. Changing rapidly between configurations allows for quick patching and hardening a machine if deemed necessary. One example of this I experienced at a Network Defense/Blue Team competition. The Red Team kept getting in with the default anonymous login ability in FTP. Had I been able to quickly configure this service, I would have prevented several attacks and issues that lasted the duration of the competition.
       If you have FTP services running and have not disabled anonymous logon, or chosen deliberately to configure it so, you might want to use this script. If your system is scanned, it's likely this will show up as a vulnerablility that can be exploited and it can give free-reign to any Red Team or bad actor. The script can be modified as needed to fit the needs of your project, device, and/or organization. 
+      One key to this is that it gives you both the option to just get rid of the service entirely, and also provides a super easy way to allow the service to run in a secure manner. That's the real key here, being able to securely provide functionality according to best practices.
       
   **What it uses:** <br> 
       The key to finding the line with that particular setting and then replacing it is the 'Sed" text tool that comes installed in many Linux-based systems. If you are attempting to use it but do not have sed installed, you can install it with the following:
