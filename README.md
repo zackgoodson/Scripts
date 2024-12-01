@@ -71,7 +71,7 @@ Script 2 is a .ps1 (Powershell) script designed to quickly block the anonymous a
       ![registry file with anonymous access set to 2, which is closed to all anonymous users](/anon_smb_access_closed.png)
 
 ___
-### **Script 3 : Securing or Disabling vsftpd** 
+### **Script 3 : Securing or Disabling vsftpd (secure_vsftpd.sh)** 
 
 Script 3 is a Bash script designed to quickly configure either the immediate diabling or immediate securing of vsftpd according to best practices. This can be used in security incidents, simulated or real, to rapidly fill potential security holes and maintain a secure vsftpd server or disable it entirely.
 
