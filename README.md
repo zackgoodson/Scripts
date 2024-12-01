@@ -77,10 +77,10 @@ Script 3 is a Bash script designed to quickly configure either the immediate dia
 
   **What it is:** <br> 
       This script is more complex and robust version of Script 1. It not only disables anonymous login, but sets a dozen more parameters in the vsftpd.conf file to secure holes that come with running an improperly configured vsftpd server. It also does a few other things in addition that are definitely more robust than Script 1; let's break its functionalities down step by step. <br> 
-> First, it checks to make sure the script is run as root, this is because if not, often changes to the vsftpd.conf file will not work. <br>
-> Second, It prompts the user if they wish to disable the vsftpd service entirely or run it securely. The user enters 1 or 2 respectively. Upon entering 1, the command is run to stop the service and then the command to disable the process to run it and the program is complete. Entering option 2 brings a lot more functionality. <br>
-> Third, (the following steps are only when option 2 is selected) the scripts creates a backup vsftpd.conf file (if it is not already backed up) in case something goes wrong and the user wishes to undo the changes, preventing the loss of the original configuration. The backup is saved at this location: /etc/vsftpd.conf.bak <br>
-> Fourth, it goes into the vsftpd.conf file and uses a function (add_or_update_line) to change the values for several important configuration values if they are already included in the file, or if not, they are added in. There are 15 changes; these with their impact/purpose are listed below:
+      <br> First, it checks to make sure the script is run as root, this is because if not, often changes to the vsftpd.conf file will not work. <br>
+<br> Second, It prompts the user if they wish to disable the vsftpd service entirely or run it securely. The user enters 1 or 2 respectively. Upon entering 1, the command is run to stop the service and then the command to disable the process to run it and the program is complete. Entering option 2 brings a lot more functionality. <br>
+<br> Third, (the following steps are only when option 2 is selected) the scripts creates a backup vsftpd.conf file (if it is not already backed up) in case something goes wrong and the user wishes to undo the changes, preventing the loss of the original configuration. The backup is saved at this location: /etc/vsftpd.conf.bak <br>
+<br> Fourth, it goes into the vsftpd.conf file and uses a function (add_or_update_line) to change the values for several important configuration values if they are already included in the file, or if not, they are added in. There are 15 changes; these with their impact/purpose are listed below:
 
 1. ssl_enable=YES
 -Enables SSL/TLS encryption for all FTP connections. Without this, all traffic (including credentials) is sent in plaintext.
@@ -121,9 +121,9 @@ These two enable using TLS 1.2 and 1.3, which are the more recent and secure ver
 15. ssl_ciphers=HIGH
 -Restricts the SSL/TLS cipher suites to strong, high-security algorithms, ensuring secure encryption and preventing the use of weak ciphers.
  
-> Fifth, the script generates a TLS certificate if there isn't one. **NOTE: This is not ideal, especially in production or lager scale environments.** Avoid using this method outside of internal and small-scale use cases as it can introduce usability and potential security issues, especially in a production environment. Get a legitimate certificate from a Certificate Authority (there are lots of resources on this topic online). The self-signed key (if generated) is stored at this location: /etc/ssl/certs/vsftpd.pem and /etc/ssl/private/vsftpd.key
+<br> Fifth, the script generates a TLS certificate if there isn't one. **NOTE: This is not ideal, especially in production or lager scale environments.** Avoid using this method outside of internal and small-scale use cases as it can introduce usability and potential security issues, especially in a production environment. Get a legitimate certificate from a Certificate Authority (there are lots of resources on this topic online). The self-signed key (if generated) is stored at this location: /etc/ssl/certs/vsftpd.pem and /etc/ssl/private/vsftpd.key
 
-> Sixth, the script restarts the service, ensuring the changes are implemented, and enables vsftpd to start on boot.
+<br> Sixth, the script restarts the service, ensuring the changes are implemented, and enables vsftpd to start on boot.
 
 
   **What it's good for:** <br> 
